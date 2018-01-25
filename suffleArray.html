@@ -1,0 +1,28 @@
+<html>
+<body>
+<div id="demo"></div>
+<input type="button" value="start" onclick="start()">
+<script>
+	var sWord=["javascript","css","html",2,3,4,"JQuery"];
+	var mystryNum;
+	var output=document.getElementById("demo");
+	function start()
+	{
+		
+		shuffleArr(sWord);
+		output.innerHTML+=sWord+"<br>";	
+	}
+	function shuffleArr(arr)
+	{
+		for(var x=arr.length-1;x>0;x--)
+		{
+			var h=Math.floor(Math.random()*(x+1));
+			var temp=arr[x];
+			arr[x]=arr[h];
+			arr[h]=temp;
+		}
+		return arr;
+	}
+</script>
+</body>
+</html>

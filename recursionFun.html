@@ -1,0 +1,27 @@
+<html>
+<body>
+<div id="demo"></div>
+<input type="button" value="start" onclick="start()">
+<script>
+	var sWord=["javascript","css","html"];
+	var mystryNum;
+	var output=document.getElementById("demo");
+	function start()
+	{
+		mystryNum=Math.floor(Math.random()*sWord.length);
+		getSecret(prompt("What is Word ?"));	
+	}
+	function getSecret(secret)
+	{
+		if(secret==sWord[mystryNum])
+		{
+			output.innerHTML="You are Correct...";
+		}
+		else
+		{
+			getSecret(prompt("Guess Again"));
+		}
+	}
+</script>
+</body>
+</html>

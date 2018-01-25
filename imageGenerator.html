@@ -1,0 +1,30 @@
+<html>
+<body>
+<div id="demo"></div>
+<img id="imgSwap" onmouseover="cImg(this)" onmouseout="bImg(this)">
+
+<script>
+	var i="http://via.placeholder.com/350x150/ffff00/fff?text=Image10";
+	document.getElementById("imgSwap").onclick=function(){
+		document.getElementById("demo").innerHTML="Clicked";
+	}
+	
+	window.onload=function()
+	{
+		document.getElementById("imgSwap").src=i;
+	}
+	function cImg(t)
+	{
+		t.src="http://via.placeholder.com/350x150/ff0000/fff?text=Image2";
+		//i="http://via.placeholder.com/350x150/ff0000/fff?text=Image10";
+	}
+	function bImg(t)
+	{
+		t.src=i;
+		
+	}
+</script>
+
+
+</body>
+</html>

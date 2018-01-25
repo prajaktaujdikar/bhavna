@@ -1,0 +1,30 @@
+<html>
+<body>
+Add Item <input type="text" id="txt">
+<button onclick='add(document.getElementById("txt").value)'>Add Item</button>
+<div id="demo"></div>
+<script>
+	var arr=[];
+	
+	function add(item)
+	{
+		alert(item);
+		arr.push(item);
+	function disp()
+	{
+		var out=document.getElementById("demo");
+		var html="";
+		for(var x=0;x<arr.length;x++)
+		{
+			html+=(x+1) + " . " + arr[x] + '<br>';
+		}
+		out.innerHTML=html;
+		
+	}
+		disp();
+	}
+	
+	
+</script>
+</body>
+</html>

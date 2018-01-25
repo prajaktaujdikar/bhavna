@@ -1,0 +1,19 @@
+<html>
+<body>
+<div id="demo">Page....</div>
+<button onclick="myFun(this)" value="Click 1">Click 1</button>
+<button onclick="myFun(this)" value="Click 2">Click 2</button>
+<button onclick="myFun(this)" value="Click 3">Click 3</button>
+
+
+<script>
+function myFun(item)
+{
+	var html=document.getElementById("demo");
+	var t=item.value;
+	html.innerHTML=t;
+	//item.value="Clicked....";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<body>
+<script>
+//var out=;
+	function validate()
+	{
+		
+		var p=event.target.children;
+		if(p.txt1.value=="")
+		{
+			//out.innerHTML+="Enter a First Name";
+			msg("Enter a First Name");
+		}	
+		if(p.txt2.value=="")
+		{
+			msg("Enter a Last Name");
+		}
+		
+	}
+	function msg(m)
+	{
+		document.getElementById("demo").innerHTML+=m + "<br>";
+	}
+</script>
+<h1>Form Validation...</h1>
+
+<div id="demo"></div>
+<form action="#" method="get" id="frm1" onsubmit="return validate()">
+First Name <input type="text" id="txt1"/><br><br>
+Last Name <input type="text" id="txt2"/><br><br>
+
+<input type="submit" value="Submit" id="btn1"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+	var friends=[];
+	function add()
+	{
+		
+		var nm=document.getElementById("txtname").value;
+		//alert(nm);
+		var x=friends.push(nm);
+		document.getElementById("table").innerHTML=friends;
+		document.getElementById("txtname").value="";
+	
+	}
+	function del()
+	{
+		var nm=prompt("Enter Name to delete : ");
+		var index=friends.indexOf(nm);
+		alert(index);
+		delete friends[index];
+		document.getElementById("table").innerHTML=friends;
+		document.getElementById("txtname").value="";
+	
+	}
+	function edit()
+	{
+		var index=prompt("Enter  position  : ");
+		var v=prompt("Enter  Value: ");
+		friends[index]=v;
+		document.getElementById("table").innerHTML=friends;
+	}
+	function show()
+	{
+	document.getElementById("table").innerHTML=friends;
+	}
+</script>
+</head>
+<body>
+<h1>Javascript CRUD Friends List</h1>
+<div id="data">
+
+ Name : <input type="text" id="txtname"/>
+ 
+<button onclick="add()">Add Friend</button>
+<button onclick="del()">Delete Friend</button>
+<button onclick="edit()">Edit Friend</button>
+</div>
+<div id="table">
+</div>
+
+</body>
+</html>

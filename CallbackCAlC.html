@@ -1,0 +1,71 @@
+<html>
+<body>
+First No:
+<input type="text" id="n1">
+
+Second No:
+<input type="text" id="n2">
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Devide</button>
+
+
+
+<div id="demo"><div>
+<script>
+
+var out=document.getElementById("demo");
+var num1=document.getElementById("n1");	
+var num2=document.getElementById("n2");	
+
+function add()
+{
+	alert(num1.value);
+	alert(num2.value);	
+		
+	outC(num1.value,num2.value,"+",function(a,b){
+		
+		return a+b;
+	})
+}
+function sub()
+{
+	alert(num1.value);
+	alert(num2.value);	
+		
+	outC(num1.value,num2.value,"-",function(a,b){
+		
+		return a-b;
+	})
+}
+function mul()
+{
+	alert(num1.value);
+	alert(num2.value);	
+		
+	outC(num1.value,num2.value,"*",function(a,b){
+		
+		return a*b;
+	})
+}
+
+function div()
+{
+	alert(num1.value);
+	alert(num2.value);	
+		
+	outC(num1.value,num2.value,"/",function(a,b){
+		
+		return a/b;
+	})
+}
+function outC(a,b,s,cback)
+{
+	var r=cback(Number(a),Number(b));
+	out.innerHTML+=a+" "+s+" "+b +"="+r+"<br>";
+}
+</script>
+</body>
+</html>

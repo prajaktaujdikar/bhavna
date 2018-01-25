@@ -1,0 +1,29 @@
+<html>
+<body>
+	<div id="demo"></div>
+
+<script>
+	var output=document.getElementById("demo");
+	var arr=["Bhavna","Geet","Ranu","Bhavna","Geet"];
+	var newArr=removeDup(arr);
+
+	output.innerHTML+=arr+'<br><br>'+newArr;
+
+	function removeDup(arr)
+	{
+		var tempArr=[];
+		var o={};
+		var z='';
+		for(var i=0;i<arr.length;i++)
+		{
+			o[arr[i]]="hi";	
+		}
+		for(z in o)
+		{
+			tempArr.push(z);
+		}
+		return tempArr;		
+	}
+</script>
+</body>
+</html>
